@@ -1,7 +1,7 @@
-Name:           amarok-extras-nonfree
+Name:           amarok-extras-freeworld
 Summary:        Additional functionality for the amaroK media player
 Version:        1.4.8
-Release:        1%{?dist}
+Release:        2%{?dist}
 
 Group:          Applications/Multimedia
 License:        GPL
@@ -9,8 +9,12 @@ URL:            http://amarok.kde.org/
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
 Requires:       amarok >= %{version}
-Requires:       xine-lib-extras-nonfree
-Requires:       libtunepimp-extras-nonfree
+Requires:       xine-lib-extras-freeworld
+Requires:       libtunepimp-extras-freeworld
+
+# obsolete old livna package
+Provides:       amarok-extras-nonfree = %{version}-%{release}
+Obsoletes:      amarok-extras-nonfree < 1.4.8-2
 
 
 %description
@@ -41,6 +45,11 @@ EOF
 
 
 %changelog
+* Mon Aug 11 2008 Thorsten Leemhuis <fedora [at] leemhuis.info> 1.4.8-2
+- rename to amarok-extras-freeworld
+- add provides and requires
+- adjust other requires for freeworld name
+
 * Thu Apr 03 2008 Rex Dieter <rdieter@fedoraproject.org> 1.4.8-1
 - Requires: libtunepimp-extras-nonfree (lvn #1498)
 
