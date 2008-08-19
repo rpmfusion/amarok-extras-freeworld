@@ -8,6 +8,8 @@ License:        GPL
 URL:            http://amarok.kde.org/
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
+BuildArch:      noarch
+
 Requires:       amarok >= %{version}
 Requires:       xine-lib-extras-freeworld
 Requires:       libtunepimp-extras-freeworld
@@ -49,6 +51,7 @@ EOF
 - rename to amarok-extras-freeworld
 - add provides and requires
 - adjust other requires for freeworld name
+- set noarch
 
 * Thu Apr 03 2008 Rex Dieter <rdieter@fedoraproject.org> 1.4.8-1
 - Requires: libtunepimp-extras-nonfree (lvn #1498)
