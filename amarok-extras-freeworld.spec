@@ -1,7 +1,7 @@
 Name:           amarok-extras-freeworld
 Summary:        Additional functionality for the amaroK media player
 Version:        1.4.8
-Release:        2%{?dist}
+Release:        3%{?dist}
 
 Group:          Applications/Multimedia
 License:        GPL
@@ -47,11 +47,13 @@ EOF
 
 
 %changelog
+* Tue Aug 19 2008 Aurelien Bompard <abompard@fedoraproject.org> 1.4.8-3
+- set noarch
+
 * Mon Aug 11 2008 Thorsten Leemhuis <fedora [at] leemhuis.info> 1.4.8-2
 - rename to amarok-extras-freeworld
 - add provides and requires
 - adjust other requires for freeworld name
-- set noarch
 
 * Thu Apr 03 2008 Rex Dieter <rdieter@fedoraproject.org> 1.4.8-1
 - Requires: libtunepimp-extras-nonfree (lvn #1498)
