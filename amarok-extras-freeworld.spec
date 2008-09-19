@@ -1,10 +1,10 @@
 Name:           amarok-extras-freeworld
 Summary:        Additional functionality for the amaroK media player
-Version:        1.4.8
-Release:        3%{?dist}
+Version:        1.4.10
+Release:        1%{?dist}
 
 Group:          Applications/Multimedia
-License:        GPL
+License:        GPLv2+
 URL:            http://amarok.kde.org/
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
@@ -29,12 +29,12 @@ mkdir -p $RPM_BUILD_DIR/%{name}-%{version}
 cd $RPM_BUILD_DIR/%{name}-%{version}
 cat > README << EOF
 Now that xine-lib is in Fedora, most additional functionalities are
-provided by the libtunepimp-extras-nonfree (mp3 musicbrainz plugin)
-and xine-lib-extras-nonfree (mp3 playback) packages.
+provided by the libtunepimp-extras-freeworld (mp3 musicbrainz plugin)
+and xine-lib-extras-freeworld (mp3 playback) packages.
 
 Thus, this is only a virtual package which depends on 
-libtunepimp-extras-nonfree
-xine-lib-extras-nonfree
+libtunepimp-extras-freeworld
+xine-lib-extras-freeworld
 to provide an upgrade path.
 
 You can safely remove this package if you want to.
@@ -47,6 +47,9 @@ EOF
 
 
 %changelog
+* Fri Sep 19 2008 Rex Dieter <rdieter@fedoraproject.org> 1.4.10-1
+- 1.4.10, (re)build for rpmfusion
+
 * Tue Aug 19 2008 Aurelien Bompard <abompard@fedoraproject.org> 1.4.8-3
 - set noarch
 
